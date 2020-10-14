@@ -1,23 +1,17 @@
+def szovegKodol(kodold):
+	valami=kodold
+	valami=valami.replace("a","$")
+	valami=valami.replace("i", "ß")
+	valami=valami.replace("b", "{")
+	valami=valami.replace("n", "}")
+	valami=valami.replace("u", "=")
+	valami=valami.replace("e", "€")
+	return valami
 
 szam=int(input("Kódolás: 1, Dekódolás:2: "))
 if (szam==1):
-	szoveg=input("Írd be a szöveget:")	
-	szovegKodol(szoveg)
-	print(szoveg)
+	kodold=str(input("Írd be a szöveget: "))
+	kodold=szovegKodol(kodold)
+	print("Kódolt szöveg: ",kodold)
 
-
-
-
-def szovegKodol(szoveg):
-	szoveg.replace("a","$")
-	szoveg.replace("é","Ł")
-	szoveg.replace("í","ß")
-	szoveg.replace("ő","¤")
-	szoveg.replace("ő","=")
-	szoveg.replace("ü","=")
-	szoveg.replace("g","*")
-	szoveg.replace("c","+")
-	szoveg.replace("b",":")
-	return szoveg
 	
-#szovegDeKodol():
