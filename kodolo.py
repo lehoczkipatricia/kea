@@ -8,36 +8,30 @@ def szovegKodol(kodold):
 	valami=valami.replace("e", "€")
 	return valami
 
+def szovegDeKodol(kodolas):
+	kesz=kodolas
+	kesz=kesz.replace("$","a")
+	kesz=kesz.replace("ß","i")
+	kesz=kesz.replace("}","n")
+	kesz=kesz.replace("=","u")
+	kesz=kesz.replace("{","b")
+	kesz=kesz.replace("€","e")
+	return kesz
+
 szam=int(input("Kódolás: 1, Dekódolás:2: "))
+
 if (szam==1):
 	kodold=str(input("Írd be a szöveget: "))
 	kodold=szovegKodol(kodold)
 	print("Kódolt szöveg: ",kodold)
 
+
+elif (szam==2):
+	kodolas=str(input("Írd be a dekódolandó szöveget: "))
+	kodolas=szovegDeKodol(kodolas)
+	print("Dekódolt szöveg:", kodolas)
 	
-	szoveg.replace("ü","=")
 	
 
-#szovegDeKodol():
 
-
-if (szam==2):
-	
-	text=str(input("Írd be a dekódolandó szöveget: "))
-"""
-	kesz=dekod.replace("$","a")
-	kesz=dekod.replace("Ł","é")
-	kesz=dekod.replace("ß","í")
-	kesz=dekod.replace("¤","ő")
-	kesz=dekod.replace("=","ő")
-	kesz=dekod.replace("@","ü")
-	kesz=dekod.replace("*","g")
-	kesz=dekod.replace("+","c")
-	kesz=dekod.replace(":","b")
-	print(kesz)
-	"""
-def szovegDeKodol(text):
-    chars = "\\`*_{}[]()>#+-.!$"
-    for c in chars:
-        text = text.replace(c, "\\" + c)
 		
