@@ -14,11 +14,23 @@ if (szam==1):
 	kodold=szovegKodol(kodold)
 	print("Kódolt szöveg: ",kodold)
 
-	
-	szoveg.replace("ü","=")
-	
+<<<<<<< HEAD
 
-#szovegDeKodol():
+
+
+def szovegKodol(szoveg):
+	szoveg.replace("a","$")
+	szoveg.replace("é","Ł")
+	szoveg.replace("í","ß")
+	szoveg.replace("ő","¤")
+	szoveg.replace("ő","=")
+	szoveg.replace("ü","@")
+	szoveg.replace("g","*")
+	szoveg.replace("c","+")
+	szoveg.replace("b",":")
+	return szoveg
+
+
 
 
 if (szam==2):
@@ -41,3 +53,6 @@ def szovegDeKodol(text):
     for c in chars:
         text = text.replace(c, "\\" + c)
 		
+=======
+	
+>>>>>>> 5beae5fdf488aaa549e29f1bcacd7ae406c6bd78
